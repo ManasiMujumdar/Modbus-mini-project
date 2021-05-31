@@ -1,0 +1,31 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Header id="MODBUS CONFIGURATION" version="Manasi Intern Project Ver 1" revision="1">
+  <Master>
+    <Address>
+      <P type="IP">127.0.0.1</P>
+      <p type="port">1502</p>
+    </Address>
+    <TotalNoOfSlaves count="1" />
+  </Master>
+  <Slave no="1">
+    <Address>
+      <P type="IP">127.0.0.1</P>
+      <SlaveID ID="2" />
+    </Address>
+    <ScanGroupCount no="4" />
+    <ScanGroup>
+      <DiscreteInput>
+        <p StartAddress="10000" Count="4" ScanPeriod="1"> </p>
+      </DiscreteInput>
+      <AnalogInput>
+        <p StartAddress="20000" Count="4" ScanPeriod="10"> </p>
+      </AnalogInput>
+      <DiscreteOutput>
+        <p StartAddress="30000" Count="2" ScanPeriod="10"> </p>
+      </DiscreteOutput>
+      <AnalogOutput>
+        <p StartAddress="40000" Count="2" ScanPeriod="20"> </p>
+      </AnalogOutput>
+    </ScanGroup>
+  </Slave>    
+</Header>
